@@ -11,9 +11,7 @@ namespace University.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-
+    
     public partial class Student
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,6 +25,8 @@ namespace University.Models
         public string FirstName { get; set; }
         public string Email { get; set; }
         public Nullable<System.DateTime> EnrollmentDate { get; set; }
+        public Nullable<bool> Estado { get; set; }
+        public Nullable<System.DateTime> Birthday { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Enrollment> Enrollment { get; set; }
